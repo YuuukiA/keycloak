@@ -39,7 +39,9 @@ public class OIDCIdentityProviderFactory extends AbstractIdentityProviderFactory
 
     @Override
     public OIDCIdentityProvider create(KeycloakSession session, IdentityProviderModel model) {
-        return new OIDCIdentityProvider(session, new OIDCIdentityProviderConfig(model));
+        OIDCIdentityProviderConfig config = new OIDCIdentityProviderConfig(model);
+        config.setDisableNonce(true);
+        return new OIDCIdentityProvider(session, config);
     }
 
     @Override
