@@ -39,7 +39,7 @@
     </dependencies>
 
     <properties>
-        <node.version>v20.11.1</node.version>
+        <node.version>v24.9.0</node.version>
         <pnpm.version>10.14.0</pnpm.version>
         <!-- The JavaScript projects use non-standard folders for their sources, therefore, name it here explicitly -->
         <maven.build.cache.input.1>src</maven.build.cache.input.1>
@@ -112,7 +112,7 @@
                             <goal>pnpm</goal>
                         </goals>
                         <configuration>
-                            <arguments>install --prefer-offline --frozen-lockfile --ignore-scripts</arguments>
+                            <arguments>install --prefer-offline --frozen-lockfile</arguments>
                         </configuration>
                     </execution>
                     <execution>
